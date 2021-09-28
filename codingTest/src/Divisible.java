@@ -7,7 +7,6 @@ import java.util.List;
 //divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.
 
 //   제한사항 :
-
 //        arr은 자연수를 담은 배열입니다.
 //        정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입니다.
 //        divisor는 자연수입니다.
@@ -27,17 +26,17 @@ public class Divisible {
     public int[] divisible(int[] arr, int divisor) {
         List<Integer> list = new ArrayList<>();
 
-        for(int a : arr){
+        for(int a : arr){ //조건에 맞는 배열 값을 저장
             if(a % divisor == 0){
                 list.add(a);
             }
         }
-        if(list.isEmpty()) list.add(-1);
-        int[] answer = new int[list.size()];
+        if(list.isEmpty()) list.add(-1); //나누어 떨어지는 원소가 없으면 -1을 리턴
+        int[] answer = new int[list.size()]; //길이 1이상인 배열 체크
         for(int i=0; i<list.size(); i++){
             answer[i] = list.get(i);
         }
-        Arrays.sort(answer);
+        Arrays.sort(answer); //오름차순 정렬
         return answer;
     }
 
