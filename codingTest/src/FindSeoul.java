@@ -3,7 +3,7 @@
 public class FindSeoul {
     public String findseoul(String[] seoul){
         int x = 0;
-        while(x<seoul.length){
+        while(x<seoul.length){ 
             if(seoul[x] == "Kim")
                 break;
             else x++;
